@@ -1,1 +1,1 @@
-web: python3 bot.py
+gunicorn -b :5000 bot:app
