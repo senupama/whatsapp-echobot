@@ -17,7 +17,6 @@ def bot():
         msg.body("Hello, I'm a simple whatsapp echobot. I echo any message you send me, please give it a try.")
         
         msg.body('This bot programme by senupama isuranda...🙂')
-        msg.media('hi-there-inscription-handwritten-lettering-illustration-black-vector-text-speech-bubble-simple-outline-marker-style-hi-there-194142459.jpg')
     else:
         msg.body('wrong type '+str(incoming_msg))
     return str(resp)
