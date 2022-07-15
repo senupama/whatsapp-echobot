@@ -15,7 +15,8 @@ def bot():
     msg = resp.message()
     if incoming_msg=='hi'or incoming_msg=='Hi' or incoming_msg=='HI' or incoming_msg=='hI' :
         msg.body("Hello, I'm a simple whatsapp echobot. I echo any message you send me, please give it a try.")
-        msg.body('This bot programme by senupama isuranda')
+        
+        msg.body('This bot programme by senupama isuranda...🙂')
     else:
         msg.body('wrong type',incoming_msg)
     return str(resp)
