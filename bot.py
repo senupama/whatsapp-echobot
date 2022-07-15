@@ -18,7 +18,7 @@ def bot():
         
         msg.body('This bot programme by senupama isuranda...🙂')
     else:
-        msg.body('wrong type',incoming_msg)
+        msg.body('wrong type '+str(incoming_msg))
     return str(resp)
 
 if __name__ == '__main__':
