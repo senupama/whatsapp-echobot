@@ -20,7 +20,7 @@ def bot():
     if incoming=='bot_name':
         msg.body('*i am whatsapp echo bot*')
     else:
-        msg.body('wrong type '+str(incomin_msg)
+        msg.body('wrong type '+str(incoming_msg)
     return str(resp)
 
 if __name__ == '__main__':
