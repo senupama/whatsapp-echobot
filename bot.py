@@ -15,11 +15,12 @@ def bot():
     msg = resp.message()
     if incoming_msg=='hi'or incoming_msg=='Hi' or incoming_msg=='HI' or incoming_msg=='hI' :
         msg.body("*Hello, I'm a simple whatsapp echobot. I echo any message you send me, please give it a try*.")
-        
         msg.body('This bot programme by senupama isuranda...🙂')
         msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/hi-there-inscription-handwritten-lettering-illustration-black-vector-text-speech-bubble-simple-outline-marker-style-hi-there-194142459.jpg')
+    if incoming=='bot_name':
+        msg.body('*i am whatsapp echo bot*')
     else:
-        msg.body('wrong type '+str(incoming_msg))
+        msg.body('wrong type '+str(incomin_msg)
     return str(resp)
 
 if __name__ == '__main__':
