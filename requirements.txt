@@ -13,4 +13,4 @@ requests==2.27.1
 twilio==7.5.0
 urllib3==1.26.8
 Werkzeug==2.0.2
-pytube3==9.6.4
+pytube==12.1.0
