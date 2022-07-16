@@ -3,9 +3,6 @@ import requests
 from twilio.twiml.messaging_response import MessagingResponse
 import os
 from twilio.rest import Client
-account_sid = account_sid
-auth_token = auth_token
-client = Client(account_sid, auth_token)
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
