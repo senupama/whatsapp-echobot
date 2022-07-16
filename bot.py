@@ -3,6 +3,7 @@ import requests
 from twilio.twiml.messaging_response import MessagingResponse
 import os
 from twilio.rest import Client
+from pytube import YouTube
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
@@ -22,7 +23,8 @@ def bot():
         msg.body('*i am whatsapp echo bot*')
         msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/bot.png')
     if incoming_msg=='youtube':
-            msg.body("*my server hasn't 'youtube'*\n")
+            url=msg.body("enter your video link")
+            msg.body('Title = '+str(url.title))
     else:
         msg.body('wrong type '+str(incoming_msg))
     return str(resp)
