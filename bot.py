@@ -19,6 +19,7 @@ def bot():
         msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/hi-there-inscription-handwritten-lettering-illustration-black-vector-text-speech-bubble-simple-outline-marker-style-hi-there-194142459.jpg')
     if incoming_msg=='bot_name':
         msg.body('*i am whatsapp echo bot*')
+        msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/bot.png')
     else:
         msg.body('wrong type '+str(incoming_msg))
     return str(resp)
