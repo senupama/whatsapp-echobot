@@ -22,7 +22,7 @@ def bot():
         msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/bot.png')
     for x in range(10):
         if incoming_msg=='fuck':
-            msg.body("*my server hasn't fuck*")
+            msg.body("*my server hasn't fuck*\n")
     else:
         msg.body('wrong type '+str(incoming_msg))
     return str(resp)
