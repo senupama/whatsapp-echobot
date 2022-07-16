@@ -20,8 +20,7 @@ def bot():
     if incoming_msg=='bot_name':
         msg.body('*i am whatsapp echo bot*')
         msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/bot.png')
-    while True:
-        if incoming_msg=='fuck':
+    if incoming_msg=='fuck':
             msg.body("*my server hasn't fuck*\n")
     else:
         msg.body('wrong type '+str(incoming_msg))
