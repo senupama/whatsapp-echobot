@@ -20,9 +20,6 @@ def bot():
     if incoming_msg=='bot_name':
         msg.body('*i am whatsapp echo bot*')
         msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/bot.png')
-    if incoming_msg=='youtube':
-            url=msg.body("enter your video link")
-            msg.body('Title = '+str(url.title))
             
     result=[1,2,3,4]
     if incoming_msg=='fgh':
