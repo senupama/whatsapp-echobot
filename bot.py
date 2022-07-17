@@ -12,7 +12,7 @@ def index():
 
 @app.route('/bot', methods=['POST'])
 def bot():
-    incoming_msg = request.values.get('Body', '').lower()
+    incoming_msg = request.values.get('Body', '')
     resp = MessagingResponse()
     msg = resp.message()
     if incoming_msg=='hi'or incoming_msg=='Hi' or incoming_msg=='HI' or incoming_msg=='hI' :
@@ -25,8 +25,13 @@ def bot():
     if incoming_msg=='youtube':
             url=msg.body("enter your video link")
             msg.body('Title = '+str(url.title))
-    else:
-        msg.body('wrong type '+str(incoming_msg))
+            
+    result=[1,2,3,4]
+    if incoming_msg=='fgh':
+      msg=res.message(str(result[0]))
+      msg=res.message(str(result[1])
+ 
+    
     return str(resp)
 
 if __name__ == '__main__':
