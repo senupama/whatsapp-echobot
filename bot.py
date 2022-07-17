@@ -26,8 +26,8 @@ def bot():
             
     result=[1,2,3,4]
     if incoming_msg=='fgh':
-      msg=res.message(str(result[0]))
-      msg=res.message(str(result[1]))
+      msg=resp.message(str(result[0]))
+      msg=resp.message(str(result[1]))
  
     
     return str(resp)
