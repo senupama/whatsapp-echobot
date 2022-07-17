@@ -2,8 +2,6 @@ from flask import Flask, request
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
 import os
-from twilio.rest import Client
-from pytube import YouTube
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
