@@ -10,24 +10,31 @@ def index():
 
 @app.route('/bot', methods=['POST'])
 def bot():
-    incoming_msg = request.values.get('Body', '')
-    resp = MessagingResponse()
-    msg = resp.message()
-    if incoming_msg=='hi'or incoming_msg=='Hi' or incoming_msg=='HI' or incoming_msg=='hI' :
-        msg.body("*Hello, I'm a simple whatsapp echobot. I echo any message you send me, please give it a try*.")
-        msg.body('This bot programme by senupama isuranda...🙂')
-        msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/hi-there-inscription-handwritten-lettering-illustration-black-vector-text-speech-bubble-simple-outline-marker-style-hi-there-194142459.jpg')
-    if incoming_msg=='bot_name':
-        msg.body('*i am whatsapp echo bot*')
-        msg.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/bot.png')
-            
-    result=[1,2,3,4]
-    if incoming_msg=='fgh':
-      msg=resp.message(str(result[0]))
-      msg=resp.message(str(result[1]))
- 
-    
-    return str(resp)
+    user_msg = request.values.get('Body', '').lower()
+  
+    # creating object of MessagingResponse
+    response = MessagingResponse()
+  
+    # User Query
+    q = user_msg + "geeksforgeeks.org"
+  
+    # list to store urls
+    result = []
+  
+    # searching and storing urls
+    for i in search(q, tld='co.in', num=6, stop=6, pause=2):
+        result.append(i)
+  
+    # displaying result
+    msg = response.message(f"--- Result for '{user_msg}' are  ---")
+  
+    msg = response.message(result[0])
+    msg = response.message(result[1])
+    msg = response.message(result[2])
+    msg = response.message(result[3])
+    msg = response.message(result[4])
+  
+    return str(response)
 
 if __name__ == '__main__':
     app.run()
