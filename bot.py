@@ -33,8 +33,7 @@ def bot():
         print("no url-->>") 
     if user_msg=='hello':
         reply.body('hello')
-        reply.body('kk')
-        
+     
     return str(response)
 
 if __name__ == '__main__':
