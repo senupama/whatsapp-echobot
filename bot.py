@@ -11,12 +11,13 @@ def index():
 @app.route('/bot', methods=['POST'])
 def bot():
     user_msg = request.form.get('Body') 
+    phone_no=request.form.get(From)
   
     # creating object of MessagingResponse
     response = MessagingResponse()
     reply=response.message()
     if user_msg=='hi':
-        reply.body('*hello!*')
+        reply.body('*hello!* '+str(phone_no))
         reply.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/hi-there-inscription-handwritten-lettering-illustration-black-vector-text-speech-bubble-simple-outline-marker-style-hi-there-194142459.jpg')
     try: # Storing the file that user send to the Twilio whatsapp number in our computer
         msg_url=request.form.get('MediaUrl0')  # Getting the URL of the file
