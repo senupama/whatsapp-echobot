@@ -30,7 +30,9 @@ def bot():
             filename = msg_url.split('/')[-1]
             open(filename+"."+ext, 'wb').write(json_path.content)  # Storing the file
     except:
-        print("no url-->>")  
+        print("no url-->>") 
+    if user_msg=='hello':
+        response.message('hello')
     return str(response)
 
 if __name__ == '__main__':
