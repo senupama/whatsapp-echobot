@@ -12,8 +12,6 @@ def index():
 def bot():
     user_msg = request.form.get('Body') 
     print("user_msg------"+str(user_msg))
-    s=input('enter your name = ')
-    print(s)
     # creating object of MessagingResponse
     response = MessagingResponse()
     reply=response.message()
