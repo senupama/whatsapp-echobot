@@ -16,7 +16,7 @@ def bot():
     response = MessagingResponse()
     reply=response.message()
     if user_msg=='hi':
-        reply.body('*hello!* '+str(phone_no))
+        reply.body('*hello!* ')
         reply.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/hi-there-inscription-handwritten-lettering-illustration-black-vector-text-speech-bubble-simple-outline-marker-style-hi-there-194142459.jpg')
     try: # Storing the file that user send to the Twilio whatsapp number in our computer
         msg_url=request.form.get('MediaUrl0')  # Getting the URL of the file
