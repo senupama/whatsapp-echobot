@@ -18,7 +18,19 @@ def bot():
     if user_msg=='hi':
         reply.body('*hello!*')
         reply.media('https://raw.githubusercontent.com/senupama/whatsapp-echobot/main/hi-there-inscription-handwritten-lettering-illustration-black-vector-text-speech-bubble-simple-outline-marker-style-hi-there-194142459.jpg')
-        
+    try: # Storing the file that user send to the Twilio whatsapp number in our computer
+        msg_url=request.form.get('MediaUrl0')  # Getting the URL of the file
+        print("msg_url-->",msg_url)
+        msg_ext=request.form.get('MediaContentType0')  # Getting the extension for the file
+        print("msg_ext-->",msg_ext)
+        ext = msg_ext.split('/')[-1]
+        print("ext-->",ext)
+        if msg_url != None:
+            json_path = requests.get(msg_url)
+            filename = msg_url.split('/')[-1]
+            open(filename+"."+ext, 'wb').write(json_path.content)  # Storing the file
+    except:
+        print("no url-->>")  
     return str(response)
 
 if __name__ == '__main__':
