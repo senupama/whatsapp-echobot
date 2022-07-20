@@ -12,7 +12,6 @@ def index():
 @app.route('/bot', methods=['POST'])
 def bot():
     user_msg = request.form.get('Body') 
-    phone_no=request.form.get(From)
   
     # creating object of MessagingResponse
     response = MessagingResponse()
