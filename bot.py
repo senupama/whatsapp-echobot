@@ -32,7 +32,11 @@ def bot():
     except:
         print("no url-->>") 
     if user_msg=='hello':
-        response.message('hello')
+        reply.body('hello')
+        response = MessagingResponse()
+        reply=response.message()
+        reply.body('kk')
+        
     return str(response)
 
 if __name__ == '__main__':
