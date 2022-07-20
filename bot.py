@@ -32,7 +32,8 @@ def bot():
     except:
         print("no url-->>") 
     if user_msg=='hello':
-        reply.body('hello')
+        s=reply.body('hello')
+        print(s)
      
     return str(response)
 
