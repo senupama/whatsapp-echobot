@@ -33,8 +33,6 @@ def bot():
         print("no url-->>") 
     if user_msg=='hello':
         reply.body('hello')
-        response = MessagingResponse()
-        reply=response.message()
         reply.body('kk')
         
     return str(response)
